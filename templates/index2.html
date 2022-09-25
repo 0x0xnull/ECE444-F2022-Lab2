@@ -51,8 +51,11 @@
             <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
 
             <h1> 
-            {% if "utoronto" is in email %} Your UofT Email is {{ email }}
-            {% else %} Please use your UofT email 
+            {% if email %}
+                {% if "utoronto" is in email %} Your UofT Email is {{email}}
+                
+                {% else %} Please use your UofT email 
+                {% endif %}
             {% endif %}
             </h1>
 
